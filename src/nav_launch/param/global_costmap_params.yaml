@@ -1,0 +1,11 @@
+global_costmap:
+  global_frame: map
+  robot_base_frame: base_footprint
+
+  update_frequency: 10.0  # 10 hz 频率更新
+  publish_frequency: 10.0 # 10 hz频率发布
+  transform_tolerance: 0.5 # 最大 tf 时间差
+
+  static_map: true
+  # static_map: false  #对全局修改地图进行尝试
+  # rolling_window: true

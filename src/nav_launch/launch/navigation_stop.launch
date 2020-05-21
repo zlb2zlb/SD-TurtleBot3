@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="rqt_mypkg_requirement_to_algorithm" name="cmd_vel_stop" type="move_stop.py"/>
+</launch>

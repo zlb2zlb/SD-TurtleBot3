@@ -1,0 +1,14 @@
+local_costmap:
+  global_frame: odom
+  robot_base_frame: base_footprint
+
+  update_frequency: 10.0  #代价地图更新速率
+  publish_frequency: 10.0 #代价地图发布速率
+  transform_tolerance: 0.5   #global_frame与robot_base_frame之间的 tf 转换时间差不能超过 0.5s，如果超过0.5s，代表此时 tf 转换已经不准确，导航部分将停止机器人。
+
+  static_map: false  
+  rolling_window: true #是否使用滚动窗口版本的costmap。如果static_map参数设置为true，则此参数必须设置为false。
+  width: 3
+  height: 3
+  resolution: 0.05
+  

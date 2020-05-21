@@ -1,0 +1,47 @@
+DWAPlannerROS:
+
+# Robot Configuration Parameters
+  max_vel_x: 0.26 # X方向最大速度
+  min_vel_x: -0.26 # X方向最小速度
+
+  max_vel_y: 0.0 # 差速轮机器人无Y方向速度，取0。差速轮就利用左右车辆的旋转速度不同进行转弯
+  min_vel_y: 0.0
+
+# The velocity when robot is moving in a straight line
+  max_vel_trans:  0.26
+  min_vel_trans:  0.13
+
+  max_vel_theta: 1.82  # 最大旋转速度
+  min_vel_theta: 0.9  # 最小旋转速度
+
+  acc_lim_x: 2.5 # 最大x加速度
+  acc_lim_y: 0.0
+  acc_lim_theta: 3.2  # 最大转角加速度
+
+# Goal Tolerance Parametes
+  xy_goal_tolerance: 0.05 # 距离公差 m
+  yaw_goal_tolerance: 0.17 # 航向角容差
+  latch_xy_goal_tolerance: false 
+
+# Forward Simulation Parameters
+  sim_time: 2.0 #以i秒为单位向前模拟轨迹的时间量
+  vx_samples: 20 #探索x空间时要使用的样本数
+  vy_samples: 0
+  vth_samples: 40 #探索theta 速度空间使用的样本数
+  controller_frequency: 10.0
+
+# Trajectory Scoring Parameters
+  path_distance_bias: 32.0
+  goal_distance_bias: 20.0
+  occdist_scale: 0.02
+  forward_point_distance: 0.325
+  stop_time_buffer: 0.2
+  scaling_speed: 0.25
+  max_scaling_factor: 0.2
+
+# Oscillation Prevention Parameters
+  oscillation_reset_dist: 0.05
+
+# Debugging
+  publish_traj_pc : true
+  publish_cost_grid_pc: true
